@@ -39,7 +39,7 @@ function Signup() {
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         /><br />
-                        <button className="ml-16 text-white mt-2 bg-red-600 p-2 rounded-xl" onClick={handleClick} disabled={isLoading}>Submit</button><br />
+                        <button className="hover:bg-red-700 duration-200 ml-16 text-white mt-2 bg-red-600 p-2 rounded-xl" onClick={handleClick} disabled={isLoading}>Submit</button><br />
                     </form>
                 </div>
                 {error && <div className='ml-10 m-2 text-center text-xl w-60 bg-red-200 border-red-700 border-2 p-2 rounded-xl text-red-700'>{error}</div>}
