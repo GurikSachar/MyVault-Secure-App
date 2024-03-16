@@ -20,9 +20,9 @@ app.use((req, res, next) => {
 app.use('/api/documents', documentRoutes)
 app.use('/api/users', userRoutes)
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect('mongodb+srv://myvaultuser:useraccess22@myvault.qwncgg7.mongodb.net/')
 .then(() => {
-    app.listen(process.env.PORT)
+    app.listen(4000)
 })
 .catch((error) => {
     console.log(error)
