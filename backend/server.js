@@ -8,7 +8,13 @@ const express = require('express')
 
 const app = express()
 
-app.use(cors())
+app.use(cors(
+    {
+    origin: ["https://my-vault-secure-app-frontend.vercel.app"],
+    methods: ["POST","GET","DELETE"],
+    credentials: true
+    }
+))
 
 app.use(express.json())
 
@@ -20,9 +26,9 @@ app.use((req, res, next) => {
 app.use('/api/documents', documentRoutes)
 app.use('/api/users', userRoutes)
 
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect('mongodb+srv://myvaultuser:useraccess22@myvault.qwncgg7.mongodb.net/')
 .then(() => {
-    app.listen(process.env.PORT)
+    app.listen(4000)
 })
 .catch((error) => {
     console.log(error)

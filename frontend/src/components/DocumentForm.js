@@ -21,7 +21,7 @@ function DocumentForm() {
         
         const document = { title, username, password, category }
 
-        const response = await fetch('http://localhost:4000/api/documents', {
+        const response = await fetch('https://my-vault-secure-app-api.vercel.app/api/documents', {
             method: 'POST',
             body: JSON.stringify(document),
             headers: {
@@ -49,7 +49,7 @@ function DocumentForm() {
 
     useEffect(() => {
         const fetchDocuments = async () => {
-            const docs = await fetch('http://localhost:4000/api/documents', {
+            const docs = await fetch('https://my-vault-secure-app-api.vercel.app/api/documents', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
