@@ -12,7 +12,7 @@ const DocumentDetails = ({ document }) => {
     }
 
     const handleDelete = async () => {
-        const response = await fetch('my-vault-secure-app-api.vercel.app/api/documents/' + document._id, {
+        const response = await fetch('https://my-vault-secure-app-api.vercel.app/api/documents/' + document._id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
