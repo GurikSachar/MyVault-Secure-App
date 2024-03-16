@@ -10,7 +10,7 @@ const app = express()
 
 app.use(cors(
     {
-    origin: ["https://my-vault-secure-app-frontend.vercel.app/"],
+    origin: ["https://my-vault-secure-app-frontend.vercel.app"],
     methods: ["POST","GET","DELETE"],
     credentials: true
     }
