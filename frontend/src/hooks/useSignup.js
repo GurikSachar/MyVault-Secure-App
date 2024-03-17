@@ -7,7 +7,7 @@ export const useSignup = () => {
     const { dispatch } = useAuthContext()
 
     const signup = async (email, password) => {
-        const response = await fetch('https://my-vault-secure-app-api.vercel.app/api/users/signup', {
+        const response = await fetch('https://myvault-secure-app-api.onrender.com/api/users/signup', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' }
