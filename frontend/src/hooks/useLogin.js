@@ -7,7 +7,7 @@ export const useLogin = () => {
     const { dispatch } = useAuthContext()
 
     const login = async (email, password) => {
-        const response = await fetch('https://myvault-secure-app-api.onrender.com//api/users/login', {
+        const response = await fetch('https://myvault-secure-app-api.onrender.com/api/users/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' }
