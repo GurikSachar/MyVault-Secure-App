@@ -1,4 +1,4 @@
-import { rateLimit } from 'express-rate-limit'
+const { rateLimit } = require('express-rate-limit')
 require('dotenv').config()
 const mongoose = require('mongoose')
 const documentRoutes = require('./routes/documentRoutes')
