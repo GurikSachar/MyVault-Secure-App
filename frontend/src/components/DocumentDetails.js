@@ -12,7 +12,7 @@ const DocumentDetails = ({ document }) => {
     }
 
     const handleDelete = async () => {
-        const response = await fetch('https://myvault-secure-app-api.onrender.com/api/documents/' + document._id, {
+        const response = await fetch(process.env.API_URL + 'api/documents/' + document._id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${user.token}`
