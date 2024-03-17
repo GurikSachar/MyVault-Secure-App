@@ -1,3 +1,4 @@
+import { rateLimit } from 'express-rate-limit'
 require('dotenv').config()
 const mongoose = require('mongoose')
 const documentRoutes = require('./routes/documentRoutes')
@@ -9,8 +10,8 @@ const express = require('express')
 
 const app = express()
 
-const limiter = rateLimiter({
-    max: 50,
+const limiter = rateLimit({
+    limit: 50,
     windowMs: 60*60*1000,
     message: "Too many request from this IP, please try again in an hour",
 })
