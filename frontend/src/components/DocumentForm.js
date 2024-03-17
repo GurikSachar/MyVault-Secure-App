@@ -21,7 +21,7 @@ function DocumentForm() {
         
         const document = { title, username, password, category }
 
-        const response = await fetch('https://myvault-secure-app-api.onrender.com/api/documents', {
+        const response = await fetch(process.env.API_URL + 'api/documents', {
             method: 'POST',
             body: JSON.stringify(document),
             headers: {
@@ -49,7 +49,7 @@ function DocumentForm() {
 
     useEffect(() => {
         const fetchDocuments = async () => {
-            const docs = await fetch('https://myvault-secure-app-api.onrender.com/api/documents', {
+            const docs = await fetch(process.env.API_URL + 'api/documents', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
