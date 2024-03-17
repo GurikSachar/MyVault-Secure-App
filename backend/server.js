@@ -4,7 +4,6 @@ const mongoose = require('mongoose')
 const documentRoutes = require('./routes/documentRoutes')
 const userRoutes = require('./routes/userRoutes')
 const cors = require('cors')
-const rateLimiter = require('express-rate-limit')
 
 const express = require('express')
 
