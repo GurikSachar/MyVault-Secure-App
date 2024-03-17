@@ -7,7 +7,7 @@ export const useSignup = () => {
     const { dispatch } = useAuthContext()
 
     const signup = async (email, password) => {
-        const response = await fetch(process.env.API_URL + 'api/users/signup', {
+        const response = await fetch(process.env.REACT_APP_API_URL + 'api/users/signup', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
             headers: { 'Content-Type': 'application/json' }
