@@ -11,7 +11,8 @@ const app = express()
 app.use(cors(
     {
         origin: 'https://my-vault-secure-app-frontend.vercel.app/',
-        optionsSuccessStatus: 200
+        optionsSuccessStatus: 200,
+        methods: "GET, POST, DELETE"
     }
 ))
 
