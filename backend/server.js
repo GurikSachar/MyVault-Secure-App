@@ -8,7 +8,12 @@ const express = require('express')
 
 const app = express()
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: 'https://my-vault-secure-app-frontend.vercel.app/',
+        optionsSuccessStatus: 200
+    }
+))
 
 app.use(express.json())
 
